@@ -5,7 +5,6 @@ angular.module('hoverButtonExample', ['jd.hoverbutton']).controller(
     $scope.elapsed = 0;
 
     $scope.doStart = function() {
-      console.log('started');
       $scope.message = "started";
     };
 

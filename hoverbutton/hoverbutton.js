@@ -33,9 +33,9 @@ angular.module('jd.hoverbutton', []).directive('jdHoverButton',
 
       element.on('mouseout', function() {
         scope.$apply(function() {
-        console.log('mouseout');
-        scope.jdTimer = 0;
-        $timeout.cancel(completeTimeout);
+          scope.jdTimer = 0;
+          angular.element(element.find('circle')[1]).attr('r', 14 * scope.jdTimer / scope.jdMaxTime);
+          $timeout.cancel(completeTimeout);
         });
       });
     }
