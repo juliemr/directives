@@ -1,0 +1,21 @@
+<html ng-app="hoverButtonExample">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+  <script src="hoverbutton.js"></script>
+  <script src="example.js"></script>
+</head>
+<body>
+  <div ng-controller='egController'>
+    <jd-hover-button jd-timer="elapsed"
+                     jd-max-time="3000"
+                     jd-begin="doStart()"
+                     jd-on-complete="doComplete()">
+    </jd-hover-button>
+    <div>
+      <span>{{elapsed}}</span>
+      <span>{{message}}</span>
+    </div>
+  </div>
+</body>
+</html>
